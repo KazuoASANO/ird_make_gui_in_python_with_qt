@@ -1,0 +1,67 @@
+﻿/* qmlprojectファイルは、QmlProject 1.1のモジュールをimportして使用します。 */
+import QmlProject 1.1
+
+/*
+ * QML Projectのファイル定義は、
+ * Project QMLタイプのオブジェクト以下に記載します。
+ */
+Project {
+    /*
+     * Qt Creatorの"デバック(D)"-"デバック開始(S)"や
+     * "ビルド(B)" - "実行 Ctrl + R"で実行する
+     * QMLファイルのTopファイルを指定。
+     */
+    mainFile: "HelloWorld.qml"
+
+    /*
+     * Qt Creatorの左部のプロジェクトコンテンツに表示する
+     * QMLファイル(拡張子.qml)の指定
+     */
+    QmlFiles {
+        /*
+         * 指定したファイルを表示するディレクトリ指定
+         *
+         *   下記の場合、"."となっているので、qmlprojectファイルと
+         * 同じディレクトリ以下を再帰的に検索して表示させます。
+         *   ディレクトリを指定した場合には、そのディレクトリ以下からしか
+         * 検索しない。
+         */
+        directory: "."
+    }
+
+    /*
+     * Qt Creatorの左部のプロジェクトコンテンツに表示する
+     * JavaScriptファイル(拡張子.js)の指定
+     */
+    JavaScriptFiles {
+        directory: "."
+    }
+
+    /*
+     * Qt Creatorの左部のプロジェクトコンテンツに表示する
+     * 画像ファイルの指定
+     *
+     *   画像は、PNG(拡張子.png)やJPEG(拡張子.jpg)などのビットマップ形式や
+     *   SVG(拡張子.svg)などのベクタース形式など、
+     * Qtでサポートされている標準の画像形式がプロジェクトコンテンツに表示される。
+     */
+    ImageFiles {
+        directory: "."
+    }
+
+    /*
+     * プラグインするQMLランタイムのディレクトリ指定
+     */
+    // importPaths: [ "../exampleplugin" ]
+
+    /*
+     * QMLプロジェクトのプロジェクトコンテンツに表示するその他ファイルの指定
+     *
+     * QMLプロジェクトの場合、テキストファイル等はプロジェクトコンテンツに
+     * 表示されません。表示したい場合には、Filesタイプを使用して表示させます。
+     */
+    Files {
+        directory: "."
+        filter: "*.md"
+    }
+}

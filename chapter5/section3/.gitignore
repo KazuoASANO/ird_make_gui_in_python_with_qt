@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Qt
+## QtCreator
+*.autosave
+
+## Qt-es
+*.qmlc
+
+# QtCreator Qml
+*.qmlproject.user
+*.qmlproject.user.*
+
